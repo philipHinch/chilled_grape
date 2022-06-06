@@ -1,10 +1,10 @@
 const Navbar = () => {
     return (
         <ul className="navbar">
-            <li className="navLink">home</li>
-            <li className="navLink">about</li>
-            <li className="navLink">blog</li>
-            <li className="navLink">pricing</li>
+            <li className="navLink">Home</li>
+            <li className="navLink">About</li>
+            <li className="navLink">Blog</li>
+            <li className="navLink">Pricing</li>
         </ul>
     );
 }

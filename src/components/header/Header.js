@@ -4,9 +4,11 @@ import Navbar from "./Navbar";
 const Header = () => {
     return (
         <header>
-            <h1 className="mainTitle">chilled grape</h1>
+            <h2 className="mainTitle">chilled grape</h2>
             <Navbar />
-            <button className="btn btnRounded loginBtn">login</button>
+            <div className="loginButtonContainer">
+                <button className="btn btnRounded loginBtn">Login</button>
+            </div>
         </header>
     );
 }
