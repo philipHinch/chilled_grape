@@ -11,8 +11,8 @@ const Article = () => {
                 <p className='articleParagraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div className="articleRight">
-                <img src={articleBlob} alt="" className='articleBlob' />
-                <img src={plant} alt="" className='plantImage' />
+                <img src={articleBlob} alt="article blob image" className='articleBlob' />
+                <img src={plant} alt="plant image" className='plantImage' />
             </div>
         </article>
     );

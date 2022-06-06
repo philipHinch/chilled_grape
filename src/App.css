@@ -14,11 +14,14 @@
   --text-md:2rem;
   --text-sm:1rem;
   --text-xs:0.8rem;
+  --padding-xl:150px;
   --padding-lg:70px;
   --padding-md:50px;
   --padding-sm:20px;
   --margin-md:50px;
   --margin-sm:20px;
+  --margin-xs:10px;
+  --margin-xxs:6px;
 }
 /* --- general styles --- */
 *,*::before,*::after{
@@ -131,6 +134,7 @@ header{
 /* --- hero container --- */
 .heroContainer{
   height: 800px;
+  /* height: 1000px; */
   background: url('./assets/images/hero_bg.svg');
   background-position: bottom;
   background-repeat: no-repeat;
@@ -222,7 +226,81 @@ header{
   position: absolute;
   width: 80%;
 }
+/* --- footer --- */
+footer{
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: 350px;
+}
+.footerLeft{
+  flex: 1;
+  /* color: var(--white); */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background: url('./assets/images/footer_blob.svg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: var(--padding-md);
+}
+.footerMainTitle{
+  margin-bottom: var(--margin-sm);
+}
+.footerRight{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex: 2;
+  padding-top: var(--padding-xl);
+}
 
+.footerList li{
+  margin-bottom:var(--margin-xxs) ;
+}
+.footerListTitle{
+  background: var(--green-blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom:var(--margin-sm) !important;
+}
+.footerList3{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+.socialIconContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  height: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  background: var(--green-blue-gradient);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.socialIconContainer:hover{
+  opacity: 0.7;
+}
+.socialIcon{
+  font-size: 1.5rem;
+}
+.footerBlob{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+/* .footerBlob{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+} */
 /* --- animations --- */
 /* --- media queries --- */
 @media(max-width:1100px){
