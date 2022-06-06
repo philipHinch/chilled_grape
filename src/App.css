@@ -39,8 +39,8 @@ body{
   box-shadow: var(--box-shadow);
   max-width: 1200px;
   max-width: 1440px;
-  overflow: hidden;
   /* max-width: 1920px; */
+  overflow-x: hidden;
 }
 h1,h2,h3,h4,h5,h6{
   text-transform: uppercase;
@@ -139,7 +139,6 @@ header{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: visible;
 }
 .heroBackground{
   position: absolute;
@@ -163,11 +162,9 @@ header{
   font-size: var(--text-xl);
   margin: var(--margin-sm) 0;
 }
-/* blobs */
+/* --- hero blobs --- */
 .blob{
   position: absolute;
-  width: 300px;
-  height: 300px;
 }
 .blob1{
   width: 380px;
@@ -181,8 +178,51 @@ header{
   height: 400px;
   top: 260px;
   right: -50px;
-  z-index: 2;
+  z-index: 1;
 }
+/* --- article --- */
+.articleContainer{
+  display: flex;
+  margin: 0 var(--margin-md);
+}
+.articleLeft{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-md);
+}
+.articleMainText{
+  margin-bottom:var(--margin-md) ;
+  font-size: var(--text-md);
+  width: 80%;
+}
+.articleParagraph{
+  line-height: 28px;
+  width: 90%;
+}
+.articleRight{
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: url('./assets/images/article_blob.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; */
+  padding: var(--padding-md);
+}
+.plantImage{
+  transform: translateY(-120px);
+  width: 80%
+}
+.articleBlob{
+  position: absolute;
+  width: 80%;
+}
+
 /* --- animations --- */
 /* --- media queries --- */
 @media(max-width:1100px){
