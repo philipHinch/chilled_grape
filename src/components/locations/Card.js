@@ -43,7 +43,7 @@ const Card = ({ name, address, pin, share, image, setClickedLocation, locations,
                         <div className="pinIconContainer" id={name}>
                             <img src={pinIcon} alt="pin icon" className='cardIcon' id={name} />
                         </div>
-                        <p className="pinText" id={name}>{pin}</p>
+                        <p className="pinText" id={name}>{pin.length > 25 ? pin.substr(0, 25) + ' ' + '...' : pin}</p>
                     </div>
 
                     <div className="shareContainer" id={name}>

@@ -1,5 +1,7 @@
 //components
 import Navbar from "./Navbar";
+//icons
+import { Icon } from '@iconify/react';
 
 const Header = () => {
     return (
@@ -8,6 +10,9 @@ const Header = () => {
             <Navbar />
             <div className="loginButtonContainer">
                 <button className="btn btnRounded loginBtn">Login</button>
+            </div>
+            <div className="hamburgerIconContainer">
+                <Icon icon="charm:menu-hamburger" className="hamburgerIcon" />
             </div>
         </header>
     );
