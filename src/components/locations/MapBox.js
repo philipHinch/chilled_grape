@@ -18,7 +18,7 @@ const MapBox = ({ clickedLocation, firstLocation, isLoading, setIsLoading, geoLo
                 lng: firstLocation.lng
             })
 
-    }, [geoLocation])
+    }, [])
 
     return (
         <>
@@ -27,7 +27,7 @@ const MapBox = ({ clickedLocation, firstLocation, isLoading, setIsLoading, geoLo
                 initialViewState={{
                     longitude: geoLocation.lng,
                     latitude: geoLocation.lat,
-                    zoom: 12
+                    zoom: 13
                 }}
                 mapStyle="mapbox://styles/mapbox/streets-v11"
                 mapboxAccessToken='pk.eyJ1IjoicGhpbGlwaGluY2giLCJhIjoiY2w0NGFyNDVzMDJxNTNicHozaG5zMW9jbCJ9.LEAoPKwi8JPrBedTIONKxQ'>
