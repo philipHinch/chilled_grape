@@ -30,7 +30,7 @@ const MapBox = ({ clickedLocation, firstLocation, isLoading, setIsLoading, geoLo
                     zoom: 13
                 }}
                 mapStyle="mapbox://styles/mapbox/streets-v11"
-                mapboxAccessToken='pk.eyJ1IjoicGhpbGlwaGluY2giLCJhIjoiY2w0NGFyNDVzMDJxNTNicHozaG5zMW9jbCJ9.LEAoPKwi8JPrBedTIONKxQ'>
+                mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}>
                 <NavigationControl />
                 <Popup latitude={geoLocation.lat} longitude={geoLocation.lng} closeOnClick={false}  >
                     {firstLocation && !clickedLocation && <div className='popupName'>{firstLocation.name}</div>}
