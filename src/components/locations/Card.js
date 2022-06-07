@@ -5,8 +5,8 @@ import shareIcon from '../../assets/icons/share.svg'
 
 const Card = ({ name, address, pin, share, image, setClickedLocation, locations, setIsLoading, setGeoLocation }) => {
 
-    //handles card click
-    const handleClick = (e) => {
+    //handles card click, waits for setting data to state before setting loading state to false
+    const handleClick = async (e) => {
         setIsLoading(true)
         const name = e.target.id
         const newLocation = locations.filter(location => {
@@ -15,9 +15,9 @@ const Card = ({ name, address, pin, share, image, setClickedLocation, locations,
             }
         })
         //saves clicked location data in clickedLocation state
-        setClickedLocation(newLocation)
+        await setClickedLocation(newLocation)
         //saves clicked location coords in geoLocation state
-        setGeoLocation({
+        await setGeoLocation({
             lat: newLocation[0].lat,
             lng: newLocation[0].lng
         })
@@ -25,7 +25,7 @@ const Card = ({ name, address, pin, share, image, setClickedLocation, locations,
     }
 
     return (
-        <div className="card" onClick={handleClick} id={name}>
+        <a href='#locationsContainer' className="card" onClick={handleClick} id={name}>
             <div className="cardLeft" id={name}>
                 <img src={image} alt="location image" className='locationImage' id={name} />
             </div>
@@ -54,7 +54,7 @@ const Card = ({ name, address, pin, share, image, setClickedLocation, locations,
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     );
 }
 

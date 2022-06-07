@@ -35,14 +35,15 @@ const Locations = () => {
     }
 
     return (
-        <section className="locationsContainer">
+        <section className="locationsContainer" id='locationsContainer'>
             {!isLoading &&
                 <MapBox
                     clickedLocation={clickedLocation}
                     firstLocation={firstLocation}
                     geoLocation={geoLocation}
                     setGeoLocation={setGeoLocation}
-                    isLoading={isLoading} />}
+                    isLoading={isLoading}
+                    setIsLoading={setIsLoading} />}
             <h2 className="locationsMainTitle">our locations</h2>
             <div className="cardContainer">
                 {locations && !isLoading && locations.map(location => (

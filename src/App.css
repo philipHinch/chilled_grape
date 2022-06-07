@@ -9,6 +9,7 @@
 /* --- other variables ---- */
 :root{
   --box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+  --text-xxl:4rem;
   --text-xl:3.5rem;
   --text-lg:3rem;
   --text-md:2rem;
@@ -31,6 +32,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
   width: 100%;
   min-height: 100vh;
@@ -42,9 +46,9 @@ body{
   height: 100vh;
   margin: auto;
   box-shadow: var(--box-shadow);
-  max-width: 1200px;
-  max-width: 1440px;
-  /* max-width: 1920px; */
+  /* max-width: 1200px;
+  max-width: 1440px; */
+  max-width: 1920px;
   overflow-x: hidden;
 }
 h1,h2,h3,h4,h5,h6{
@@ -135,7 +139,7 @@ header{
 }
 /* --- hero container --- */
 .heroContainer{
-  height: 800px;
+  height: 1010px;
   /* height: 1000px; */
   background: url('./assets/images/hero_bg.svg');
   background-position: bottom;
@@ -159,13 +163,13 @@ header{
   z-index: -1;
 }
 .mainHeroTextContainer{
-  margin-right: 200px;
-  margin-bottom: 130px;
-  width: 480px;
+  margin-right: 300px;
+  margin-bottom: 300px;
+  width: 550px;
   z-index: 2;
 }
 .mainHeroText{
-  font-size: var(--text-xl);
+  font-size: var(--text-xxl);
   margin: var(--margin-sm) 0;
 }
 /* --- hero blobs --- */
@@ -222,8 +226,8 @@ header{
   /* padding: var(--padding-md); */
 }
 .plantImage{
-  transform: translateY(-160px);
-  width: 80%
+  transform: translateY(-200px);
+  width: 70%
 }
 .articleBlob{
   position: absolute;
@@ -236,19 +240,21 @@ header{
 }
 .locationsMainTitle{
   font-size: var(--text-md);
-  margin-top: var(--margin-md);
+  margin-top: var(--margin-lg);
   margin-bottom: var(--margin-sm);
 }
 /* --- card --- */
 .cardContainer{
   display: flex;
   justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .card{
   display: flex;
   height: 250px;
-  width: 600px;
+  width: 550px;
+  width: 610px;
   margin-bottom: var(--margin-md);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -300,6 +306,18 @@ header{
   border-radius: 20px;
   border: 1px solid #ccc;
 }
+.popupName{
+  font-size: 1.2rem !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: var(--margin-xs);
+  background: var(--green-blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.popupAddress{
+  letter-spacing: 1px;
+}
 .mapboxgl-popup-close-button {
   display: none;
 }
@@ -314,6 +332,8 @@ header{
 .mapboxgl-popup-tip{
   border-top-color: var(--black) !important; 
   border-bottom-color: var(--black) !important; 
+  /* border-left-color: var(--black) !important; 
+  border-right-color: var(--black) !important;  */
 }
 /* --- footer --- */
 footer{

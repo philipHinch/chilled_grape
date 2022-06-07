@@ -4,7 +4,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 //hooks
 import { useEffect } from 'react';
 
-const MapBox = ({ clickedLocation, firstLocation, isLoading, geoLocation, setGeoLocation }) => {
+const MapBox = ({ clickedLocation, firstLocation, isLoading, setIsLoading, geoLocation, setGeoLocation }) => {
 
     //sets geolocation data based on wether a user clicked a location or not
     useEffect(() => {
@@ -17,7 +17,8 @@ const MapBox = ({ clickedLocation, firstLocation, isLoading, geoLocation, setGeo
                 lat: firstLocation.lat,
                 lng: firstLocation.lng
             })
-    }, [])
+
+    }, [geoLocation])
 
     return (
         <>
@@ -26,16 +27,16 @@ const MapBox = ({ clickedLocation, firstLocation, isLoading, geoLocation, setGeo
                 initialViewState={{
                     longitude: geoLocation.lng,
                     latitude: geoLocation.lat,
-                    zoom: 1
+                    zoom: 12
                 }}
                 mapStyle="mapbox://styles/mapbox/streets-v11"
                 mapboxAccessToken='pk.eyJ1IjoicGhpbGlwaGluY2giLCJhIjoiY2w0NGFyNDVzMDJxNTNicHozaG5zMW9jbCJ9.LEAoPKwi8JPrBedTIONKxQ'>
                 <NavigationControl />
                 <Popup latitude={geoLocation.lat} longitude={geoLocation.lng} closeOnClick={false}  >
-                    {firstLocation && !clickedLocation && <div>{firstLocation.name}</div>}
-                    {firstLocation && !clickedLocation && <div>{firstLocation.address}</div>}
-                    {clickedLocation && <div>{clickedLocation[0].location_name}</div>}
-                    {clickedLocation && <div>{clickedLocation[0].address_line}</div>}
+                    {firstLocation && !clickedLocation && <div className='popupName'>{firstLocation.name}</div>}
+                    {firstLocation && !clickedLocation && <div className='popupAddress'>{firstLocation.address}</div>}
+                    {clickedLocation && <div className='popupName'>{clickedLocation[0].location_name}</div>}
+                    {clickedLocation && <div className='popupAddress'>{clickedLocation[0].address_line}</div>}
                 </Popup>
             </Map >}
         </>
