@@ -195,7 +195,7 @@ header{
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: var(--padding-md);
+  /* padding: var(--padding-md); */
 }
 .articleMainText{
   margin-bottom:var(--margin-md) ;
@@ -212,20 +212,29 @@ header{
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   /* background: url('./assets/images/article_blob.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; */
-  padding: var(--padding-md);
+  /* padding: var(--padding-md); */
 }
 .plantImage{
-  transform: translateY(-120px);
+  transform: translateY(-160px);
   width: 80%
 }
 .articleBlob{
   position: absolute;
   width: 80%;
+}
+/* --- locations --- */
+.locationsContainer{
+  margin: 0 var(--margin-md);
+}
+/* --- mapbox --- */
+#map{
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
 }
 /* --- footer --- */
 footer{
