@@ -231,10 +231,84 @@ header{
 .locationsContainer{
   margin: 0 var(--margin-md);
 }
-/* --- mapbox --- */
-#map{
+.locationsMainTitle{
+  font-size: var(--text-md);
+  margin-top: var(--margin-md);
+  margin-bottom: var(--margin-sm);
+}
+/* --- card --- */
+.cardContainer{
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+}
+.card{
+  display: flex;
+  height: 250px;
+  width: 600px;
+  /* margin: 0 auto; */
+  margin-bottom: var(--margin-md);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover{
+  transform: scale(1.05);
+}
+.cardLeft{
+  height: 100%;
+  width: 300px;
+  background-color: gold;
   box-shadow: var(--box-shadow);
   border-radius: 20px;
+  z-index: 5;
+}
+.cardRight{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.innerCardRight{
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.locationName{
+  padding-left: var(--padding-md);
+  margin-top: var(--margin-xs) ;
+}
+.addressContainer,.pinContainer,.shareContainer{
+  display: flex;
+  padding-left: var(--padding-md);
+  margin: var(--margin-xs) 0;
+}
+.cardIcon{
+  margin-right: 20px;
+}
+/* --- mapbox --- */
+#map{
+  width: 100% !important; 
+  height: 500px !important;
+  margin: auto;
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+.mapboxgl-popup-close-button {
+  display: none;
+}
+.mapboxgl-popup-content {
+  font: inherit;
+  font-family: inherit;
+  font: 400 15px/22px 'Poppins', sans-serif;
+  text-align: center;
+  background-color: var(--black) !important;
+  color: var(--white);
+}
+.mapboxgl-popup-tip{
+  border-top-color: var(--black) !important; 
+  border-bottom-color: var(--black) !important; 
 }
 /* --- footer --- */
 footer{
