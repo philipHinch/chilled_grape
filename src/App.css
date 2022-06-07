@@ -120,8 +120,9 @@ a{
 /* --- header --- */
 header{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center ;
+  align-items: center ;
+
   padding: var(--padding-sm) var(--padding-md);
   z-index: 3;
 }
@@ -132,10 +133,12 @@ header{
 }
 .navbar{
   display: flex;
+  align-items: center;
   font-weight: 600;
   z-index: 4;
 }
 .navbar li{
+  margin: auto;
   font-size: 1rem;
   margin-right: 40px;
 }
