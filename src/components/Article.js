@@ -9,6 +9,7 @@ const Article = () => {
             <div className="articleLeft">
                 <h2 className='articleMainText'>Lorem ipsum dolor sit amet.</h2>
                 <p className='articleParagraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button className="btn btnRounded">Read More</button>
             </div>
             <div className="articleRight">
                 <img src={articleBlob} alt="article blob image" className='articleBlob' />
