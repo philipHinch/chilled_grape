@@ -97,9 +97,6 @@ a{
   padding: 8px 60px;
   border-radius: 50px;
 }
-.btnSquared{
-
-}
 .readMoreBtn{
   font-size: 1.1rem;
   padding: var(--padding-sm) var(--padding-lg);
@@ -112,7 +109,6 @@ header{
   display: flex;
   justify-content: center ;
   align-items: center ;
-
   padding: var(--padding-sm) var(--padding-md);
   z-index: 3;
 }
@@ -120,12 +116,14 @@ header{
   margin-right:auto ;
   color: var(--white);
   z-index: 2;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 .navbar{
   display: flex;
   align-items: center;
   font-weight: 600;
   z-index: 4;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 .navbar li{
   margin: auto;
@@ -134,12 +132,15 @@ header{
 }
 .loginButtonContainer{
   margin-left: 80px;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 .hamburgerIconContainer{
   display: none;
   cursor: pointer;
   z-index: 50;
   transition: all 0.2s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out forwards;
+
 }
 .hamburgerIconContainer:hover{
   opacity: 0.6;
@@ -235,6 +236,7 @@ header{
   margin-bottom: 300px;
   width: 550px;
   z-index: 2;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 .mainHeroText{
   font-size: var(--text-xxl);
@@ -490,6 +492,14 @@ footer{
   z-index: -1;
 } */
 /* --- animations --- */
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 /* --- media queries --- */
 @media(max-width:1500px){
   .plantImage{
@@ -593,7 +603,6 @@ footer{
   .articleContainer{
     flex-direction: column-reverse;
   }
- 
   .articleRight{
     justify-content: center;
   }
@@ -613,8 +622,6 @@ footer{
   }
   .cardLeft{
     width: 200px;
-    /* height: 220px; */
-    /* width: 200px; */
   }
   .locationName{
     font-size: var(--text-sm);

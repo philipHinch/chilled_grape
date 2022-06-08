@@ -4,7 +4,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 //hooks
 import { useEffect } from 'react';
 
-const MapBox = ({ clickedLocation, firstLocation, isLoading, setIsLoading, geoLocation, setGeoLocation }) => {
+const MapBox = ({ clickedLocation, firstLocation, isLoading, geoLocation, setGeoLocation }) => {
 
     //sets geolocation data based on wether a user clicked a location or not
     useEffect(() => {

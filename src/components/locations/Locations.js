@@ -20,18 +20,30 @@ const Locations = () => {
     //fetches data from api and stores it in state
     const getLocations = async () => {
         setIsLoading(true)
-        const data = await fetch('https://my-json-server.typicode.com/TomSearle/cb-devtest-api/locations')
-        const res = await data.json()
-        //saves all locations in state
-        setLocations(res[0])
-        //saves first location in state
-        setFirstLocation({
-            name: res[0][0].location_name,
-            address: res[0][0].address_line,
-            lat: res[0][0].lat,
-            lng: res[0][0].lng
-        })
-        setIsLoading(false)
+        try {
+            const data = await fetch('https://my-json-server.typicode.com/TomSearle/cb-devtest-api/locations')
+            const res = await data.json()
+            //saves all locations in state
+            setLocations(res[0])
+            //saves first location in state
+            setFirstLocation({
+                name: res[0][0].location_name,
+                address: res[0][0].address_line,
+                lat: res[0][0].lat,
+                lng: res[0][0].lng
+            })
+            setIsLoading(false)
+        } catch (error) {
+            console.log(error.message);
+            //saves empty first location in state (prevents app from crashing)
+            setFirstLocation({
+                name: '',
+                address: '',
+                lat: 0,
+                lng: 0
+            })
+            setIsLoading(false)
+        }
     }
 
     return (
