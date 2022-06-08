@@ -1,16 +1,22 @@
 //icons
 import { Icon } from '@iconify/react';
-import { useState } from 'react';
 
 const SlidingMenu = ({ setIsMenuOpen, isMenuOpen }) => {
 
-
+    //handles close icon click
     const handleCloseClick = () => {
         setIsMenuOpen(false)
     }
 
+    //handles dark overlay click
+    const handleOverlayClick = (e) => {
+        if (e.target.classList.contains('slidingMenuContainer')) {
+            setIsMenuOpen(false)
+        }
+    }
+
     return (
-        <nav className={`slidingMenuContainer ${ isMenuOpen ? '' : 'hidden' }`}>
+        <nav className={`slidingMenuContainer ${ isMenuOpen ? '' : 'hidden' }`} onClick={handleOverlayClick}>
             <div className="slidingMenuInner">
                 <div className="slidingMenuInnerInner">
                     <ul className='slidingMenuList'>

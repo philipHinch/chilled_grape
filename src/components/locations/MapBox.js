@@ -17,7 +17,6 @@ const MapBox = ({ clickedLocation, firstLocation, isLoading, setIsLoading, geoLo
                 lat: firstLocation.lat,
                 lng: firstLocation.lng
             })
-
     }, [])
 
     return (
